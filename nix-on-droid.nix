@@ -54,7 +54,7 @@
       inherit nixvim catppuccin;
     };
     sharedModules = [
-      nix-index-database.hmModules.nix-index
+      nix-index-database.homeModules.nix-index
       nixvim.homeModules.nixvim
       catppuccin.homeModules.catppuccin
     ];

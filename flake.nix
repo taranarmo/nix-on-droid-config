@@ -22,7 +22,7 @@
         #nixvim.homeModules.nixvim
 
         # list of extra modules for Nix-on-Droid system
-        # { nix.registry.nixpkgs.flake = nixpkgs; }
+        { nix.registry.nixpkgs.flake = nixpkgs; }
         # ./path/to/module.nix
 
         # or import source out-of-tree modules like:

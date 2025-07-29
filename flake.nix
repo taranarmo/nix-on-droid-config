@@ -2,7 +2,7 @@
   description = "Advanced example of Nix-on-Droid system config with home-manager.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager.url = "github:nix-community/home-manager";
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";

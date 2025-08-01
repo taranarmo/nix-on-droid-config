@@ -8,6 +8,10 @@
   catppuccin.enable = true;
   catppuccin.flavor = "mocha";
 
+  home.packages = with pkgs; [
+    gemini-cli
+  ];
+
   # Read the changelog before changing this value
   home.stateVersion = "24.05";
 

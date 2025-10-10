@@ -26,7 +26,7 @@
     unzip
 
     python3
-    julia
+    julia-bin
     ripgrep
     openssh
   ];

@@ -65,9 +65,10 @@
   user.shell = "${pkgs.zsh}/bin/zsh";
 
 
-  android-integration = {
-    termux-setup-storage.enable = true;
-    termux-open.enable = true;
-  };
+  # TODO: re-enable once termux-am activity-manager wrapper works again
+  # android-integration = {
+  #   termux-setup-storage.enable = true;
+  #   termux-open.enable = true;
+  # };
 
 }

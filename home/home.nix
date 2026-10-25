@@ -1,16 +1,8 @@
-{ config, lib, pkgs, nixvim, catppuccin, ... }:
+{ config, lib, pkgs, catppuccin, ... }:
 
 {
-  imports = [
-    ./nixvim.nix
-  ];
-
   catppuccin.enable = true;
   catppuccin.flavor = "mocha";
-
-  home.packages = with pkgs; [
-    gemini-cli
-  ];
 
   # Read the changelog before changing this value
   home.stateVersion = "24.05";
@@ -33,9 +25,11 @@
   };
   programs.git = {
     enable = true;
-    userName = "Sergey Volkov ";
-    userEmail = "taranarmo@gmail.com";
-    difftastic.enable = true;
+    settings.user = {
+      name = "Sergey Volkov ";
+      email = "taranarmo@gmail.com";
+    };
   };
+  programs.difftastic.git.enable = true;
   programs.pay-respects.enable = true;
 }

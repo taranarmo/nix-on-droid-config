@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nix-index-database, nixvim, catppuccin, ... }:
+{ config, lib, pkgs, nix-index-database, catppuccin, ... }:
 
 {
   # Simply install just the packages
@@ -30,7 +30,6 @@
     ripgrep
     openssh
   ];
-
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
   environment.etcBackupExtension = ".bak";
 
@@ -55,11 +54,10 @@
     backupFileExtension = "hm-bak";
     useGlobalPkgs = true;
     extraSpecialArgs = {
-      inherit nixvim catppuccin;
+      inherit nix-index-database catppuccin;
     };
     sharedModules = [
       nix-index-database.homeModules.nix-index
-      nixvim.homeModules.nixvim
       catppuccin.homeModules.catppuccin
     ];
   };

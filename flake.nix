@@ -4,13 +4,12 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     home-manager.url = "github:nix-community/home-manager";
-    nix-on-droid.url = "github:nix-community/nix-on-droid";
+    nix-on-droid.url = "github:taranarmo/nix-on-droid/master";
     nix-index-database.url = "github:nix-community/nix-index-database";
-    nixvim.url = "github:nix-community/nixvim";
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-on-droid, nix-index-database, nixvim, catppuccin }: {
+  outputs = { self, nixpkgs, home-manager, nix-on-droid, nix-index-database, catppuccin }: {
 
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       modules = [
@@ -28,7 +27,7 @@
       # list of extra special args for Nix-on-Droid modules
       extraSpecialArgs = {
         # rootPath = ./.;
-        inherit nix-index-database nixvim catppuccin;
+        inherit nix-index-database catppuccin;
       };
 
       # set nixpkgs instance, it is recommended to apply `nix-on-droid.overlays.default`

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nix-index-database, catppuccin, ... }:
+{ config, lib, pkgs, nix-index-database, ... }:
 
 {
   # Simply install just the packages
@@ -53,11 +53,10 @@
     backupFileExtension = "hm-bak";
     useGlobalPkgs = true;
     extraSpecialArgs = {
-      inherit nix-index-database catppuccin;
+      inherit nix-index-database;
     };
     sharedModules = [
       nix-index-database.homeModules.nix-index
-      catppuccin.homeModules.catppuccin
     ];
   };
 

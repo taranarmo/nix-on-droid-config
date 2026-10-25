@@ -1,9 +1,6 @@
-{ config, lib, pkgs, catppuccin, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  catppuccin.enable = true;
-  catppuccin.flavor = "mocha";
-
   # Read the changelog before changing this value
   home.stateVersion = "24.05";
 
